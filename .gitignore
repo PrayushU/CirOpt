@@ -1,0 +1,24 @@
+# Ignore 
+build
+
+.vscode
+CMakeFiles/
+CMakeCache.txt
+src/CMakeFiles/
+src/cmake_install.cmake
+src/Makefile
+bin/
+.DS_Store
+.idea
+DartConfiguration.tcl
+runcmake.sh
+runcmake.sh
+lib
+CTestTestfile.cmake
+Makefile
+cmake_install.cmake
+tests/CMakeFiles/
+tests/cmake_install.cmake
+tests/CTestTestfile.cmake
+tests/Makefile
+tests/bin

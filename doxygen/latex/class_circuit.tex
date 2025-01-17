@@ -1,0 +1,104 @@
+\doxysection{Circuit Class Reference}
+\hypertarget{class_circuit}{}\label{class_circuit}\index{Circuit@{Circuit}}
+
+
+{\ttfamily \#include $<$CCircuit.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_circuit_ab142fcf2838ab805dce431f45e6e14cc}{Circuit}} (int \+\_\+vector\+\_\+size, int \texorpdfstring{$\ast$}{*}\+\_\+circuit\+\_\+vector)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_circuit}{Circuit} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_circuit_a59a7ec761eaef36909e5ffd2d20a09fe}{populate\+\_\+graph}} (int vector\+\_\+size, int \texorpdfstring{$\ast$}{*}circuit\+\_\+vector)
+\begin{DoxyCompactList}\small\item\em Populates the graph with units based on the provided circuit vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_circuit_ae9d62661b452c4d4ef5d6e75f0278cbf}{Circuit}} (int num\+\_\+units)
+\begin{DoxyCompactList}\small\item\em Constructor initializes the vector of CUnits to the correct size. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_circuit_a89cd7fe6d5ac2820483599f9ceb5299c}\label{class_circuit_a89cd7fe6d5ac2820483599f9ceb5299c} 
+\mbox{\hyperlink{class_c_unit}{CUnit}} \texorpdfstring{$\ast$}{*} {\bfseries units}
+\item 
+\Hypertarget{class_circuit_a41584704a874152b15727c769fb64bc0}\label{class_circuit_a41584704a874152b15727c769fb64bc0} 
+int {\bfseries num\+\_\+units}
+\item 
+\Hypertarget{class_circuit_a7cccacc749d9d6d6679b4a5cfc015f68}\label{class_circuit_a7cccacc749d9d6d6679b4a5cfc015f68} 
+int {\bfseries entry\+\_\+idx}
+\item 
+\Hypertarget{class_circuit_aa2f5a48aa0779ae7bf96c65f3ff27815}\label{class_circuit_aa2f5a48aa0779ae7bf96c65f3ff27815} 
+double {\bfseries feed\+\_\+g\+\_\+circuit}
+\item 
+\Hypertarget{class_circuit_a7b4b5ba49807ae1b3a611adf3864c59c}\label{class_circuit_a7b4b5ba49807ae1b3a611adf3864c59c} 
+double {\bfseries feed\+\_\+w\+\_\+circuit}
+\item 
+\Hypertarget{class_circuit_a4caceb940d9137bc6fccbee21ace786b}\label{class_circuit_a4caceb940d9137bc6fccbee21ace786b} 
+std\+::vector$<$ \mbox{\hyperlink{class_c_unit}{CUnit}} $>$ {\bfseries val\+\_\+units}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header for the circuit class
+
+This header defines the circuit class and its associated functions 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_circuit_ab142fcf2838ab805dce431f45e6e14cc}\index{Circuit@{Circuit}!Circuit@{Circuit}}
+\index{Circuit@{Circuit}!Circuit@{Circuit}}
+\doxysubsubsection{\texorpdfstring{Circuit()}{Circuit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_circuit_ab142fcf2838ab805dce431f45e6e14cc} 
+Circuit\+::\+Circuit (\begin{DoxyParamCaption}\item[{int}]{\+\_\+vector\+\_\+size}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{\+\_\+circuit\+\_\+vector}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{class_circuit}{Circuit} class. 
+
+Initializes the \doxylink{class_circuit}{Circuit} object with the given vector size and circuit vector.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+vector\+\_\+size} & The size of the circuit vector. \\
+\hline
+{\em \+\_\+circuit\+\_\+vector} & Pointer to the circuit vector. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_circuit_ae9d62661b452c4d4ef5d6e75f0278cbf}\index{Circuit@{Circuit}!Circuit@{Circuit}}
+\index{Circuit@{Circuit}!Circuit@{Circuit}}
+\doxysubsubsection{\texorpdfstring{Circuit()}{Circuit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_circuit_ae9d62661b452c4d4ef5d6e75f0278cbf} 
+Circuit\+::\+Circuit (\begin{DoxyParamCaption}\item[{int}]{num\+\_\+units}{}\end{DoxyParamCaption})}
+
+
+
+Constructor initializes the vector of CUnits to the correct size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+\_\+units} & The number of units in the circuit. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_circuit_a59a7ec761eaef36909e5ffd2d20a09fe}\index{Circuit@{Circuit}!populate\_graph@{populate\_graph}}
+\index{populate\_graph@{populate\_graph}!Circuit@{Circuit}}
+\doxysubsubsection{\texorpdfstring{populate\_graph()}{populate\_graph()}}
+{\footnotesize\ttfamily \label{class_circuit_a59a7ec761eaef36909e5ffd2d20a09fe} 
+void Circuit\+::populate\+\_\+graph (\begin{DoxyParamCaption}\item[{int}]{vector\+\_\+size}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{circuit\+\_\+vector}{}\end{DoxyParamCaption})}
+
+
+
+Populates the graph with units based on the provided circuit vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vector\+\_\+size} & The size of the circuit vector. \\
+\hline
+{\em circuit\+\_\+vector} & Pointer to the circuit vector. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/CCircuit.\+h\item 
+src/CCircuit.\+cpp\end{DoxyCompactItemize}

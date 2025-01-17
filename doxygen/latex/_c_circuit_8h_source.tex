@@ -1,0 +1,68 @@
+\doxysection{CCircuit.\+h}
+\hypertarget{_c_circuit_8h_source}{}\label{_c_circuit_8h_source}\index{include/CCircuit.h@{include/CCircuit.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ CCIRCUIT}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ CCIRCUIT}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <Parameters.h>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}CUnit.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <CUnit.h>}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_circuit}{Circuit}}\ \{}
+\DoxyCodeLine{00021\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_circuit_ab142fcf2838ab805dce431f45e6e14cc}{Circuit}}(\textcolor{keywordtype}{int}\ \_vector\_size,\ \textcolor{keywordtype}{int}\ *\_circuit\_vector);}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_circuit_a59a7ec761eaef36909e5ffd2d20a09fe}{populate\_graph}}(\textcolor{keywordtype}{int}\ vector\_size,\ \textcolor{keywordtype}{int}\ *circuit\_vector);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_c_unit}{CUnit}}\ *units;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{int}\ num\_units;\ \textcolor{comment}{//\ this\ is\ calculated\ by\ the\ vector\ size.}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{int}\ entry\_idx;\ \textcolor{comment}{//\ the\ index\ of\ the\ unit\ who\ receives\ the\ circuit\ feed.}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{double}\ feed\_g\_circuit;\ \textcolor{comment}{//\ the\ unit\ is\ kg/s}}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{double}\ feed\_w\_circuit;\ \textcolor{comment}{//\ the\ unit\ is\ kg/s}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//=====================================}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{comment}{//\ Validation\ Module\ Only:}}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{comment}{//=====================================}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//\ Constructor}}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{class_circuit_ab142fcf2838ab805dce431f45e6e14cc}{Circuit}}(\textcolor{keywordtype}{int}\ num\_units);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{comment}{//\ Default\ destructor}}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{class_circuit}{\string~Circuit}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{comment}{//\ Validation\ Module\ Only:\ Vector\ to\ hold\ units\ of\ the\ circuit}}
+\DoxyCodeLine{00042\ \ \ \ \ std::vector<CUnit>\ val\_units;}
+\DoxyCodeLine{00043\ \};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_unit}{Unit}}\ \{}
+\DoxyCodeLine{00046\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ setConcNum(\textcolor{keywordtype}{int}\ num)\ \{\ concNum\ =\ num;\ \}}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ setInterNum(\textcolor{keywordtype}{int}\ num)\ \{\ interNum\ =\ num;\ \}}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ setTailsNum(\textcolor{keywordtype}{int}\ num)\ \{\ tailsNum\ =\ num;\ \}}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ setMark(\textcolor{keywordtype}{bool}\ mark)\ \{\ marked\ =\ mark;\ \}}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{int}\ getConcNum()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ concNum;\ \}}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{int}\ getInterNum()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ interNum;\ \}}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{int}\ getTailsNum()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ tailsNum;\ \}}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{bool}\ isMarked()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ marked;\ \}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{int}\ concNum;}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{int}\ interNum;}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{int}\ tailsNum;}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{bool}\ marked;}
+\DoxyCodeLine{00061\ \};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{keywordtype}{bool}\ mark\_units(\textcolor{keywordtype}{int}\ unit\_num,\ std::vector<Unit>\&\ val\_units,\ std::vector<bool>\&\ canReachOutlet1,\ std::vector<bool>\&\ canReachOutlet2);}
+\DoxyCodeLine{00065\ \textcolor{keywordtype}{bool}\ Check\_Validity(\textcolor{keywordtype}{int}\ vector\_size,\ \textcolor{keywordtype}{int}*\ circuit\_vector);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

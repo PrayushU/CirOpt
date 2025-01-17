@@ -1,0 +1,100 @@
+\doxysection{CUnit.\+h}
+\hypertarget{_c_unit_8h_source}{}\label{_c_unit_8h_source}\index{include/CUnit.h@{include/CUnit.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ CUNIT}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ CUNIT}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_unit}{CUnit}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{comment}{//\ index\ of\ the\ unit\ to\ which\ this\ unit’s\ concentrate\ stream\ is\ connected}}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{int}\ conc\_num;}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{comment}{//\ index\ of\ the\ unit\ to\ which\ this\ unit’s\ intermediate\ stream\ is\ connected}}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{int}\ inter\_num;}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{comment}{//\ index\ of\ the\ unit\ to\ which\ this\ unit’s\ tailings\ stream\ is\ connected}}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{int}\ tails\_num;}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//\ A\ Boolean\ that\ is\ changed\ to\ true\ if\ the\ unit\ has\ been\ seen}}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{bool}\ mark;}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//\ the\ index\ of\ the\ unit}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ num;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{comment}{//======================}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{//\ input\ values\ (states)}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{comment}{//======================}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{double}\ Fi\_g;}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{double}\ Fi\_w;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{double}\ Fi\_g\_old;}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{double}\ Fi\_w\_old;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{comment}{//===============}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{comment}{//\ output\ values}}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{comment}{//===============}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{double}\ C\_g;}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{double}\ C\_w;}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{double}\ I\_g;}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{double}\ I\_w;}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{double}\ T\_g;}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{double}\ T\_w;}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{class_c_unit_af94af33f7e89ad04a27e77479f78eb4a}{CUnit}}();}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{//\ CUnit(int\ \_num,\ int\ \_conc\_num,\ int\ \_inter\_num,\ int\ \_tails\_num);}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_unit_a792a4805fc25968ea86d34408d52bd1f}{update\_output}}();}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_unit_a742fb419c30858683052c6e214d4a1ea}{print\_status}}();}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_unit_ae0e30d0a48ac6005ce8df3f0eeaf3814}{initialise\_parameters}}();}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_unit_acdcfcba9a2e2d33dafcf0129b2cee85f}{set\_initial\_guess}}(\textcolor{keywordtype}{double}\ \_Fi\_g,\ \textcolor{keywordtype}{double}\ \_Fi\_w);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{comment}{//=====================================}}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{comment}{//\ Validation\ Module\ Only:}}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{comment}{//=====================================}}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{comment}{//\ Setters\ for\ the\ unit\ connections}}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ setConcNum(\textcolor{keywordtype}{int}\ num)\ \{\ conc\_num\ =\ num;\ \}}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ setInterNum(\textcolor{keywordtype}{int}\ num)\ \{\ inter\_num\ =\ num;\ \}}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ setTailsNum(\textcolor{keywordtype}{int}\ num)\ \{\ tails\_num\ =\ num;\ \}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{comment}{//\ Getters\ for\ the\ unit\ connections}}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{int}\ getConcNum()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ conc\_num;\ \}}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{int}\ getInterNum()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ inter\_num;\ \}}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{int}\ getTailsNum()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ tails\_num;\ \}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{comment}{//\ Marking\ functions}}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ setMark(\textcolor{keywordtype}{bool}\ value)\ \{\ mark\ =\ value;\ \}}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{bool}\ isMarked()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ mark;\ \}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{comment}{//=================}}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{comment}{//\ constant\ values}}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{comment}{//=================}}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{double}\ k\_cg;}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{double}\ k\_ig;}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{double}\ k\_cw;}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{double}\ k\_iw;}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{double}\ rho;}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{double}\ phi;}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{double}\ V;}
+\DoxyCodeLine{00087\ \ \ \ \ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{comment}{//====================}}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{comment}{//\ intermediate\ values}}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{comment}{//====================}}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{double}\ t;}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{double}\ R\_cg;}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{double}\ R\_cw;}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{double}\ R\_ig;}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{double}\ R\_iw;}
+\DoxyCodeLine{00097\ \};}
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

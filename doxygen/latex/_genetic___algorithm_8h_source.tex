@@ -1,0 +1,31 @@
+\doxysection{Genetic\+\_\+\+Algorithm.\+h}
+\hypertarget{_genetic___algorithm_8h_source}{}\label{_genetic___algorithm_8h_source}\index{include/Genetic\_Algorithm.h@{include/Genetic\_Algorithm.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ GEN\_ALGO}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ GEN\_ALGO}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <Parameters.h>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}CCircuit.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}CSimulator.h"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <cstdlib>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <ctime>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_circuit_f}{CircuitF}}\ \{}
+\DoxyCodeLine{00019\ \ \ \textcolor{keywordtype}{int}\ *sequence;}
+\DoxyCodeLine{00020\ \ \ \textcolor{keywordtype}{double}\ fitness\_value;}
+\DoxyCodeLine{00021\ \};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \mbox{\hyperlink{struct_circuit_f}{CircuitF}}\ **allocate\_gen2(\textcolor{keywordtype}{int}\ num\_child);}
+\DoxyCodeLine{00024\ \textcolor{keywordtype}{void}\ init\_gen0(\mbox{\hyperlink{struct_circuit_f}{CircuitF}}**\ Children,\ \textcolor{keywordtype}{int}\ pop\_multiplier\ =\ POP\_MULT);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keywordtype}{int}\ evolve\_step(\mbox{\hyperlink{struct_circuit_f}{CircuitF}}**\ Parents,\ \mbox{\hyperlink{struct_circuit_f}{CircuitF}}**\ Children,\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct}\ \mbox{\hyperlink{struct_algorithm___parameters}{Algorithm\_Parameters}}\ parameters\ =\ DEFAULT\_ALGORITHM\_PARAMETERS);}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

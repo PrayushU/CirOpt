@@ -1,0 +1,28 @@
+\doxysection{Parameters.\+h}
+\hypertarget{_parameters_8h_source}{}\label{_parameters_8h_source}\index{include/Parameters.h@{include/Parameters.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PARAM}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PARAM}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_algorithm___parameters}{Algorithm\_Parameters}}}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{int}\ max\_generations;}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{double}\ crossover\_rate;}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{double}\ mutation\_rate;}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{comment}{//\ other\ parameters\ for\ your\ algorithm}}
+\DoxyCodeLine{00013\ \};}
+\DoxyCodeLine{00014\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ NUM\_CHILD=10;}
+\DoxyCodeLine{00015\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ NUM\_UNIT=10;}
+\DoxyCodeLine{00016\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ POP\_MULT=100;}
+\DoxyCodeLine{00017\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ THRESHOLD=100;}
+\DoxyCodeLine{00018\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ SIZE\_CIRCUIT=3*NUM\_UNIT\ +1;}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ DEFAULT\_ALGORITHM\_PARAMETERS\ \(\backslash\)}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\ \ \ \ Algorithm\_Parameters\ \{1000,\ 0.8,\ 0.01\}}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

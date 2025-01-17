@@ -1,0 +1,59 @@
+\doxysection{postprocessing.\+Post\+Processor Class Reference}
+\hypertarget{classpostprocessing_1_1_post_processor}{}\label{classpostprocessing_1_1_post_processor}\index{postprocessing.PostProcessor@{postprocessing.PostProcessor}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classpostprocessing_1_1_post_processor_ad1483e243cbd2eba3fd5b240051d8fb6}\label{classpostprocessing_1_1_post_processor_ad1483e243cbd2eba3fd5b240051d8fb6} 
+{\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\item 
+\mbox{\hyperlink{classpostprocessing_1_1_post_processor_a738e6c57fb8aef920242f7da94212f00}{check\+\_\+output\+\_\+directory}} (self)
+\item 
+\mbox{\hyperlink{classpostprocessing_1_1_post_processor_a1a5ee32082ae9a2dcfae704f044adeb9}{create\+\_\+graph}} (self, vector, num\+\_\+units, performance, recovery, grade)
+\item 
+\mbox{\hyperlink{classpostprocessing_1_1_post_processor_aab7d4f95ca73d310d211240dda5f7dab}{create\+\_\+convergence\+\_\+plot}} (self, best\+\_\+fitness\+\_\+over\+\_\+time)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classpostprocessing_1_1_post_processor_a738e6c57fb8aef920242f7da94212f00}\index{postprocessing.PostProcessor@{postprocessing.PostProcessor}!check\_output\_directory@{check\_output\_directory}}
+\index{check\_output\_directory@{check\_output\_directory}!postprocessing.PostProcessor@{postprocessing.PostProcessor}}
+\doxysubsubsection{\texorpdfstring{check\_output\_directory()}{check\_output\_directory()}}
+{\footnotesize\ttfamily \label{classpostprocessing_1_1_post_processor_a738e6c57fb8aef920242f7da94212f00} 
+postprocessing.\+Post\+Processor.\+check\+\_\+output\+\_\+directory (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Ensures that the 'outputs' directory exists and creates it if not
+\end{DoxyVerb}
+ \Hypertarget{classpostprocessing_1_1_post_processor_aab7d4f95ca73d310d211240dda5f7dab}\index{postprocessing.PostProcessor@{postprocessing.PostProcessor}!create\_convergence\_plot@{create\_convergence\_plot}}
+\index{create\_convergence\_plot@{create\_convergence\_plot}!postprocessing.PostProcessor@{postprocessing.PostProcessor}}
+\doxysubsubsection{\texorpdfstring{create\_convergence\_plot()}{create\_convergence\_plot()}}
+{\footnotesize\ttfamily \label{classpostprocessing_1_1_post_processor_aab7d4f95ca73d310d211240dda5f7dab} 
+postprocessing.\+Post\+Processor.\+create\+\_\+convergence\+\_\+plot (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{best\+\_\+fitness\+\_\+over\+\_\+time}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Creates a convergence plot using Matplotlib based on the given fitness over time.
+
+Args:
+    best_fitness_over_time (list): A list of best fitness values over generations.
+
+Returns:
+    None
+\end{DoxyVerb}
+ \Hypertarget{classpostprocessing_1_1_post_processor_a1a5ee32082ae9a2dcfae704f044adeb9}\index{postprocessing.PostProcessor@{postprocessing.PostProcessor}!create\_graph@{create\_graph}}
+\index{create\_graph@{create\_graph}!postprocessing.PostProcessor@{postprocessing.PostProcessor}}
+\doxysubsubsection{\texorpdfstring{create\_graph()}{create\_graph()}}
+{\footnotesize\ttfamily \label{classpostprocessing_1_1_post_processor_a1a5ee32082ae9a2dcfae704f044adeb9} 
+postprocessing.\+Post\+Processor.\+create\+\_\+graph (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{vector}{, }\item[{}]{num\+\_\+units}{, }\item[{}]{performance}{, }\item[{}]{recovery}{, }\item[{}]{grade}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Creates a directed graph using Graphviz based on the given vector and number of units.
+
+Args:
+    vector (list): A list representing the connections between units.
+    num_units (int): The number of units in the system.
+
+Returns:
+    None
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+post\+\_\+processing/postprocessing.\+py\end{DoxyCompactItemize}

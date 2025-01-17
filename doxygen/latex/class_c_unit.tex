@@ -1,0 +1,154 @@
+\doxysection{CUnit Class Reference}
+\hypertarget{class_c_unit}{}\label{class_c_unit}\index{CUnit@{CUnit}}
+
+
+{\ttfamily \#include $<$CUnit.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_unit_af94af33f7e89ad04a27e77479f78eb4a}{CUnit}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_c_unit}{CUnit} class. \end{DoxyCompactList}\item 
+\Hypertarget{class_c_unit_a792a4805fc25968ea86d34408d52bd1f}\label{class_c_unit_a792a4805fc25968ea86d34408d52bd1f} 
+void {\bfseries update\+\_\+output} ()
+\begin{DoxyCompactList}\small\item\em Updates the output flow rates based on the current input flow rates and reaction constants. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_unit_a742fb419c30858683052c6e214d4a1ea}{print\+\_\+status}} ()
+\begin{DoxyCompactList}\small\item\em Prints the current status of the unit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_unit_ae0e30d0a48ac6005ce8df3f0eeaf3814}{initialise\+\_\+parameters}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the unit parameters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_unit_acdcfcba9a2e2d33dafcf0129b2cee85f}{set\+\_\+initial\+\_\+guess}} (double \+\_\+\+Fi\+\_\+g, double \+\_\+\+Fi\+\_\+w)
+\begin{DoxyCompactList}\small\item\em Sets the initial guess for the input flow rates. \end{DoxyCompactList}\item 
+\Hypertarget{class_c_unit_a2de9723add6d6ed8bd07749a77bf73b9}\label{class_c_unit_a2de9723add6d6ed8bd07749a77bf73b9} 
+void {\bfseries set\+Conc\+Num} (int num)
+\item 
+\Hypertarget{class_c_unit_ab80b9eba8079ac17d9848a16e1509a27}\label{class_c_unit_ab80b9eba8079ac17d9848a16e1509a27} 
+void {\bfseries set\+Inter\+Num} (int num)
+\item 
+\Hypertarget{class_c_unit_a76252e68ceb62c0e63942e04ef400b91}\label{class_c_unit_a76252e68ceb62c0e63942e04ef400b91} 
+void {\bfseries set\+Tails\+Num} (int num)
+\item 
+\Hypertarget{class_c_unit_ad5554a24c1b6b19ede790fc4fb7dc56c}\label{class_c_unit_ad5554a24c1b6b19ede790fc4fb7dc56c} 
+int {\bfseries get\+Conc\+Num} () const
+\item 
+\Hypertarget{class_c_unit_a95533bd8d194e99c0aeaac8c6af713d2}\label{class_c_unit_a95533bd8d194e99c0aeaac8c6af713d2} 
+int {\bfseries get\+Inter\+Num} () const
+\item 
+\Hypertarget{class_c_unit_a926e9a8097c3937ca3c04902c0852f4e}\label{class_c_unit_a926e9a8097c3937ca3c04902c0852f4e} 
+int {\bfseries get\+Tails\+Num} () const
+\item 
+\Hypertarget{class_c_unit_af7e881e55b646d6327b683b0e23b45b1}\label{class_c_unit_af7e881e55b646d6327b683b0e23b45b1} 
+void {\bfseries set\+Mark} (bool value)
+\item 
+\Hypertarget{class_c_unit_abb5e89ecf11ec82f0844d9d4724edbeb}\label{class_c_unit_abb5e89ecf11ec82f0844d9d4724edbeb} 
+bool {\bfseries is\+Marked} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_c_unit_acdc8636ac295d38228496f681b1b87ce}\label{class_c_unit_acdc8636ac295d38228496f681b1b87ce} 
+int {\bfseries conc\+\_\+num}
+\item 
+\Hypertarget{class_c_unit_a9c4fafa6f6c0e7cbad5953e47416c105}\label{class_c_unit_a9c4fafa6f6c0e7cbad5953e47416c105} 
+int {\bfseries inter\+\_\+num}
+\item 
+\Hypertarget{class_c_unit_a18f9b08b44f3f38d4483406fdf73c356}\label{class_c_unit_a18f9b08b44f3f38d4483406fdf73c356} 
+int {\bfseries tails\+\_\+num}
+\item 
+\Hypertarget{class_c_unit_a18aec3c4d21ec8fbf30d4f5f81ff2412}\label{class_c_unit_a18aec3c4d21ec8fbf30d4f5f81ff2412} 
+bool {\bfseries mark}
+\item 
+\Hypertarget{class_c_unit_a14df56e3c247743d1e3ec393bd84dafc}\label{class_c_unit_a14df56e3c247743d1e3ec393bd84dafc} 
+int {\bfseries num}
+\item 
+\Hypertarget{class_c_unit_ac5a5fad27f4725350d9348cc97defc3f}\label{class_c_unit_ac5a5fad27f4725350d9348cc97defc3f} 
+double {\bfseries Fi\+\_\+g}
+\item 
+\Hypertarget{class_c_unit_a14a4fcd279699241faf4b361fbc23e01}\label{class_c_unit_a14a4fcd279699241faf4b361fbc23e01} 
+double {\bfseries Fi\+\_\+w}
+\item 
+\Hypertarget{class_c_unit_a91bda8bd6447d274d3b8d514bd1c640a}\label{class_c_unit_a91bda8bd6447d274d3b8d514bd1c640a} 
+double {\bfseries Fi\+\_\+g\+\_\+old}
+\item 
+\Hypertarget{class_c_unit_a43492e5d82c454270a9c85756118b356}\label{class_c_unit_a43492e5d82c454270a9c85756118b356} 
+double {\bfseries Fi\+\_\+w\+\_\+old}
+\item 
+\Hypertarget{class_c_unit_a0e09b340b16140ca13945bb50759a349}\label{class_c_unit_a0e09b340b16140ca13945bb50759a349} 
+double {\bfseries C\+\_\+g}
+\item 
+\Hypertarget{class_c_unit_a919fe45ec3c207abd8507f03ff8a6153}\label{class_c_unit_a919fe45ec3c207abd8507f03ff8a6153} 
+double {\bfseries C\+\_\+w}
+\item 
+\Hypertarget{class_c_unit_a3bf1faff3c145083dc4111856c7e999b}\label{class_c_unit_a3bf1faff3c145083dc4111856c7e999b} 
+double {\bfseries I\+\_\+g}
+\item 
+\Hypertarget{class_c_unit_a61925d12bf954cb36cee5cd0e9bdeaa3}\label{class_c_unit_a61925d12bf954cb36cee5cd0e9bdeaa3} 
+double {\bfseries I\+\_\+w}
+\item 
+\Hypertarget{class_c_unit_a08a523d3e5eb173263f6f60652ddeaed}\label{class_c_unit_a08a523d3e5eb173263f6f60652ddeaed} 
+double {\bfseries T\+\_\+g}
+\item 
+\Hypertarget{class_c_unit_a9c9e57f9a188fd924a1a678f6532ea3a}\label{class_c_unit_a9c9e57f9a188fd924a1a678f6532ea3a} 
+double {\bfseries T\+\_\+w}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header for the unit class 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_c_unit_af94af33f7e89ad04a27e77479f78eb4a}\index{CUnit@{CUnit}!CUnit@{CUnit}}
+\index{CUnit@{CUnit}!CUnit@{CUnit}}
+\doxysubsubsection{\texorpdfstring{CUnit()}{CUnit()}}
+{\footnotesize\ttfamily \label{class_c_unit_af94af33f7e89ad04a27e77479f78eb4a} 
+CUnit\+::\+CUnit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{class_c_unit}{CUnit} class. 
+
+Initializes unit parameters and sets default values for unit connections and state. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_c_unit_ae0e30d0a48ac6005ce8df3f0eeaf3814}\index{CUnit@{CUnit}!initialise\_parameters@{initialise\_parameters}}
+\index{initialise\_parameters@{initialise\_parameters}!CUnit@{CUnit}}
+\doxysubsubsection{\texorpdfstring{initialise\_parameters()}{initialise\_parameters()}}
+{\footnotesize\ttfamily \label{class_c_unit_ae0e30d0a48ac6005ce8df3f0eeaf3814} 
+void CUnit\+::initialise\+\_\+parameters (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Initializes the unit parameters. 
+
+Sets the default values for the output flow rates, reaction constants, and physical properties. \Hypertarget{class_c_unit_a742fb419c30858683052c6e214d4a1ea}\index{CUnit@{CUnit}!print\_status@{print\_status}}
+\index{print\_status@{print\_status}!CUnit@{CUnit}}
+\doxysubsubsection{\texorpdfstring{print\_status()}{print\_status()}}
+{\footnotesize\ttfamily \label{class_c_unit_a742fb419c30858683052c6e214d4a1ea} 
+void CUnit\+::print\+\_\+status (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Prints the current status of the unit. 
+
+Outputs the unit number, connections, input flow rates, reaction constants, and output flow rates. \Hypertarget{class_c_unit_acdcfcba9a2e2d33dafcf0129b2cee85f}\index{CUnit@{CUnit}!set\_initial\_guess@{set\_initial\_guess}}
+\index{set\_initial\_guess@{set\_initial\_guess}!CUnit@{CUnit}}
+\doxysubsubsection{\texorpdfstring{set\_initial\_guess()}{set\_initial\_guess()}}
+{\footnotesize\ttfamily \label{class_c_unit_acdcfcba9a2e2d33dafcf0129b2cee85f} 
+void CUnit\+::set\+\_\+initial\+\_\+guess (\begin{DoxyParamCaption}\item[{double}]{\+\_\+\+Fi\+\_\+g}{, }\item[{double}]{\+\_\+\+Fi\+\_\+w}{}\end{DoxyParamCaption})}
+
+
+
+Sets the initial guess for the input flow rates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+Fi\+\_\+g} & Initial guess for the gold feed flow rate. \\
+\hline
+{\em \+\_\+\+Fi\+\_\+w} & Initial guess for the waste feed flow rate. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/CUnit.\+h\item 
+src/CUnit.\+cpp\end{DoxyCompactItemize}

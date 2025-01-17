@@ -1,0 +1,120 @@
+#!/bin/bash
+
+# To run this, submit this job from repo root directory, ie
+# `qsub assignment-1/run_test.sh``
+
+# Job name
+#PBS -N assignment_1
+
+# Resource requirements
+#PBS -l select=1:ncpus=128:mpiprocs=1:ompthreads=1:mem=10000Mb
+
+# Time required in hh:mm:ss
+#PBS -l walltime=0:10:00
+
+# File to contain standard out and error.
+#PBS -j oe
+#PBS -o qsub.log
+
+# if [ -n "$PBS_O_WORKDIR" ]; then
+#     # Change directory to $PBS_O_WORKDIR
+#     cd "$PBS_O_WORKDIR"
+#
+#     module load GCC
+#     module load CMake
+#
+#     # CMake
+#     mkdir -p build
+#     pushd build
+#
+#     cmake .. 2>&1 | tee cmake.log
+#
+#     if [ $? -eq 0 ]; then
+#         echo "cmake: pass"
+#     else
+#         echo "cmake: fail"
+#         echo "Read the cmake.log below to investigate."
+#         cat cmake.log
+#         exit 1
+#     fi
+#
+#     # Make
+#     make 2>&1 | tee make.log
+#
+#     if [ $? -eq 0 ]; then
+#         echo "make: pass"
+#     else
+#         echo "make: fail"
+#         echo "Read the make.log below to investigate."
+#         cat make.log
+#         exit 1
+#     fi
+#     popd
+# fi
+#
+
+
+crossover_rates=(0.8)
+mutation_rates=(0.01)
+num_children=(12)
+num_units=(42)
+pop_mults=(100)
+threshold=2000
+# Fixed value for max_generations
+max_generations=2000
+
+# ./config.sh
+mkdir -p build
+pushd build
+cd build 
+
+cmake ..
+
+make 
+
+popd
+
+for i in $(seq 1 20)
+  ./gen_param.sh "$max_generations" "${crossover_rates[0]}" "${mutation_rates[0]}" \
+                      "${num_children[0]}" "${num_units[0]}" "${pop_mults[0]}" "$threshold"
+
+cd build
+make
+cd ..
+echo "iter $i"
+./build/bin/Circuit_Optimizer >> output.txt
+#
+#
+# For tuning hyper parameter, uncomment to run it 
+# for i in "${!crossover_rates[@]}"; do
+#     echo "Running with units $crossover_rates[i]"
+# echo "Generated Parameters.h with max_generations=$max_generations, crossover_rate=$crossover_rate[i], mutation_rate=$mutation_rate, NUM_CHILD=$num_children, NUM_UNIT=$num_units, POP_MULT=$pop_mult, THRESHOLD=$threshold, SIZE_CIRCUIT=$size_circuit"
+#     ./gen_param.sh "$max_generations" "${crossover_rates[i]}" "${mutation_rates[0]}" \
+#                    "${num_children[0]}" "${num_units[0]}" "${pop_mults[0]}" "$threshold"
+# cd build
+# make
+# cd ..
+# # Measure serial execution time
+# echo "Running ./build/bin/Circuit_Optimizer"
+#  start_time=$(date +%s%3N)
+#  echo "Corssover rate: ${crossover_rates[i]}" >> output.txt
+# ./build/bin/Circuit_Optimizer >> output.txt
+#  end_time=$(date +%s%3N)
+#  serial_time=$((end_time - start_time))
+#  echo "Serial time: $serial_time ms"
+# echo
+# done
+#
+# Tests
+# for i in 1 16 32 64 128; do
+#     # Measure parallelized execution time
+#     start_time=$(date +%s%3N)
+#     OMP_NUM_THREADS=$i ./build/bin/Circuit_Optimizer> md-$i.txt 2>&1
+#     end_time=$(date +%s%3N)
+#     parallelized_time=$((end_time - start_time))
+#     echo "Time with $i threads: $parallelized_time ms"
+#
+       # Calculate parallel efficiency using python commandline
+#         parallel_efficiency=$(python3.11 -c "print($serial_time / ($parallelized_time * $i))")
+#         echo "Parallel efficiency with $i threads: $parallel_efficiency"
+# done
